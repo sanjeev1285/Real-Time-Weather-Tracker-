@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="theme-toggle" title="Toggle Dark/Light Mode">
+                <i class="fas fa-moon"></i>
+            </div>
+            <button id="location-btn" title="Use Current Location">
+                <i class="fas fa-location-arrow"></i>
+            </button>
+        </div>
+        
+        <div class="search-container">
+            <input type="text" id="city-input" placeholder="Enter city name..." autocomplete="off">
+            <button id="search-btn" title="Search Weather">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+
+        <div class="weather-container">
+            <div class="current-weather">
+                <div class="location">
+                    <h2 id="city-name">--</h2>
+                    <p id="date">--</p>
+                </div>
+                <div class="weather-info">
+                    <div class="temperature">
+                        <h1 id="temp">--°C</h1>
+                        <p id="description">--</p>
+                    </div>
+                    <div class="weather-icon">
+                        <i id="weather-icon" class="fas fa-cloud"></i>
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="detail-item" title="Wind Speed">
+                        <i class="fas fa-wind"></i>
+                        <span id="wind">-- km/h</span>
+                    </div>
+                    <div class="detail-item" title="Humidity">
+                        <i class="fas fa-tint"></i>
+                        <span id="humidity">--%</span>
+                    </div>
+                    <div class="detail-item" title="Pressure">
+                        <i class="fas fa-compress-arrows-alt"></i>
+                        <span id="pressure">-- hPa</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="forecast-container">
+                <h3>5-Day Forecast</h3>
+                <div class="forecast-cards" id="forecast-cards">
+                    <!-- Forecast cards will be dynamically added here -->
+                </div>
+            </div>
+        </div>
+
+        <div class="loading-overlay" id="loading-overlay">
+            <div class="loading-spinner">
+                <i class="fas fa-cloud-sun fa-spin"></i>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
